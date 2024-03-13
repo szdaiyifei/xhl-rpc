@@ -16,6 +16,10 @@ public class ServiceProxyFactory {
      * @return
      */
     public static <T> T getProxy(Class<T> serviceClass) {
+
+        System.out.println("getProxy");
+        System.out.println(serviceClass);
+        System.out.println(serviceClass.getName());
         return (T) Proxy.newProxyInstance(
                 serviceClass.getClassLoader(),
                 new Class[]{serviceClass},

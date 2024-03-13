@@ -15,7 +15,10 @@ public class EasyConsumerExample {
         // 使用动态代理获取 UserService 的实现类对象
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
 
-        // 获取 UserService 的实现类对象
+
+        System.out.println("代理对象：" + userService);
+        System.out.println("开始------------------------");
+
         User user = new User();
         user.setName("xhl");
         // 调用

@@ -55,6 +55,9 @@ public class HttpServerHandler implements Handler<HttpServerRequest> {
                 rpcResponse.setData(result);
                 rpcResponse.setDataType(method.getReturnType());
                 rpcResponse.setMessage("ok");
+
+                System.out.println(result);
+                System.out.println(method.getReturnType());
             } catch (Exception e) {
                 e.printStackTrace();
                 rpcResponse.setMessage(e.getMessage());

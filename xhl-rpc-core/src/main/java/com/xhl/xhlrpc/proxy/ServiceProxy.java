@@ -10,6 +10,7 @@ import com.xhl.xhlrpc.serializer.Serializer;
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 /**
  * @author daiyifei
@@ -38,6 +39,13 @@ public class ServiceProxy implements InvocationHandler {
                 .parameterTypes(method.getParameterTypes())
                 .args(args)
                 .build();
+
+        System.out.println("代理请求：" + rpcRequest);
+        System.out.println("服务名称：" + rpcRequest.getServiceName());
+        System.out.println("方法名称："+ rpcRequest.getMethodName());
+        System.out.println("参数类型："+ Arrays.toString(rpcRequest.getParameterTypes()));
+        System.out.println("参数列表："+ Arrays.toString(rpcRequest.getArgs()));
+
         try {
             // 序列化
             byte[] bodyBytes = serializer.serialize(rpcRequest);
@@ -49,6 +57,7 @@ public class ServiceProxy implements InvocationHandler {
                 byte[] result = httpResponse.bodyBytes();
                 // 反序列化
                 RpcResponse rpcResponse = serializer.deserialize(result, RpcResponse.class);
+                System.out.println("拿到结果" + rpcResponse.getData());
                 return rpcResponse.getData();
             }
         } catch (IOException e) {
