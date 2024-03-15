@@ -1,0 +1,8 @@
+#rpc.name="xhlrpc"
+#rpc.version=2.0
+#rpc.serverPort=8082
+
+rpc:
+  name: xhlrpc
+  version: 2.0
+  serverPort: 8081
