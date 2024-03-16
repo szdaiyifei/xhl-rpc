@@ -20,4 +20,10 @@ public interface UserService {
 
         return 1;
     }
+
+    default String getName() {
+        return "xhl";
+    }
+
+
 }

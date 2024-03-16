@@ -30,5 +30,10 @@ public class ConsumerExample {
         }
         long number = userService.getNumber();
         System.out.println(number);
+
+        String userName = userService.getName();
+        System.out.println(userName);
+
+
     }
 }
