@@ -27,19 +27,6 @@ public class ConfigUtils {
         return loadConfig(tClass, prefix, "");
     }
 
-//    public  static <T> T loadConfig(Class<T> tClass, String prefix, String environment) {
-//
-//        StringBuilder configFileBuilder = new StringBuilder("application");
-//        if(StrUtil.isNotBlank(environment)){
-//            configFileBuilder.append("-").append(environment);
-//        }
-//        configFileBuilder.append(".properties");
-//        Props props = new Props(configFileBuilder.toString());
-//        System.out.println(props);
-//        return props.toBean(tClass,prefix);
-//    }
-//
-//
 
     public static <T> T loadConfig(Class<T> tClass, String prefix, String environment) {
         T config = loadFromProperties(tClass, prefix, environment);

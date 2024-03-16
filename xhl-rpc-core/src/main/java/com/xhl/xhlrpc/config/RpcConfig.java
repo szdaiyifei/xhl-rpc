@@ -4,6 +4,7 @@ import lombok.Data;
 
 /**
  * RPC 框架配置
+ *
  * @author daiyifei
  */
 @Data
@@ -28,5 +29,11 @@ public class RpcConfig {
      * 服务器端口号
      */
     private Integer serverPort = 8080;
+
+    /**
+     * 模拟调用
+     */
+
+    private boolean mock = false;
 
 }
