@@ -28,8 +28,9 @@ public class ConsumerExample {
         } else {
             System.out.println("user==null");
         }
-        long number = userService.getNumber();
+        int number = userService.getNumber();
         System.out.println(number);
+
 
         String userName = userService.getName();
         System.out.println(userName);

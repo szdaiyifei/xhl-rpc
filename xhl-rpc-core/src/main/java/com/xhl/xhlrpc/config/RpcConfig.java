@@ -1,5 +1,6 @@
 package com.xhl.xhlrpc.config;
 
+import com.xhl.xhlrpc.serializer.SerializerKeys;
 import lombok.Data;
 
 /**
@@ -35,5 +36,11 @@ public class RpcConfig {
      */
 
     private boolean mock = false;
+
+    /**
+     * 序列化器
+     */
+
+    private String serializer = SerializerKeys.JDK;
 
 }
