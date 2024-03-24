@@ -4,6 +4,7 @@ import java.io.IOException;
 
 /**
  * 序列化器接口
+ * @author daiyifei
  */
 public interface Serializer {
 

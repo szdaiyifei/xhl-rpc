@@ -28,6 +28,7 @@ public class ServiceProxyFactory {
         System.out.println("getProxy");
         System.out.println(serviceClass);
         System.out.println(serviceClass.getName());
+
         return (T) Proxy.newProxyInstance(
                 serviceClass.getClassLoader(),
                 new Class[]{serviceClass},
