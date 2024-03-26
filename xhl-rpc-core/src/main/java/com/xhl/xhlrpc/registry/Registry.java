@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * @author daiyifei
+ * 注册中心
  */
 public interface Registry {
     /**
@@ -42,4 +43,10 @@ public interface Registry {
      * 服务销毁
      */
     void destroy();
+
+
+    /**
+     * 心跳检测（服务端）
+     */
+    void heartBeat();
 }
